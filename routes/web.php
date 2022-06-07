@@ -20,3 +20,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'App\Http\Controllers\RestoController@index');
 Route::get('/list', 'App\Http\Controllers\RestoController@list');
+
+Route::view('/add', 'add_resto');
+Route::post('/add', 'App\Http\Controllers\RestoController@addResto');

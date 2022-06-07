@@ -12,7 +12,7 @@
         />
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="container-fluid navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="/">Zomato</a>
             <button
                 class="navbar-toggler"
@@ -48,7 +48,7 @@
             </div>
         </nav>
 
-        <div>@yield('content')</div>
+        <div class="container">@yield('content')</div>
         <footer>copyright 2022</footer>
 
         <script
