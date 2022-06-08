@@ -33,3 +33,6 @@ Route::get('/delete/{id}', 'App\Http\Controllers\RestoController@deleteResto');
 // registration and login
 Route::view('register', 'register');
 Route::post('register', 'App\Http\Controllers\userController@register');
+
+Route::view('login', 'login');
+Route::post('login', 'App\Http\Controllers\userController@logIn');

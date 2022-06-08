@@ -71,6 +71,7 @@ class userController extends Controller
         else{
             $userType = $user->type;
             if($password == $user->password && $email == $user->email ){
+                return redirect('/');
                 return response()->json([
                     "status" => true,
                     "type" => $userType
@@ -84,4 +85,5 @@ class userController extends Controller
         }
         
     }
+
 }
