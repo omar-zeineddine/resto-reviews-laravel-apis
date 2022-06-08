@@ -43,14 +43,14 @@
                         <a class="nav-link">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link">Register</a>
+                        <a class="nav-link" href="register">Register</a>
                     </li>
                 </ul>
             </div>
         </nav>
 
         <div class="container">@yield('content')</div>
-        <footer>copyright 2022</footer>
+        <!-- <footer>copyright 2022</footer> -->
 
         <script
             src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
