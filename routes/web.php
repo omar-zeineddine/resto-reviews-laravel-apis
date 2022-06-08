@@ -26,4 +26,6 @@ Route::post('/add', 'App\Http\Controllers\RestoController@addResto');
 
 
 Route::get('/edit/{id}', 'App\Http\Controllers\RestoController@editResto');
+Route::post('/edit', 'App\Http\Controllers\RestoController@updateResto');
+
 Route::get('/delete/{id}', 'App\Http\Controllers\RestoController@deleteResto');

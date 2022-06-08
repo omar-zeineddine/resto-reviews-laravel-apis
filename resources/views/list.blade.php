@@ -17,7 +17,7 @@
       <th scope="col">ID</th>
       <th scope="col">name</th>
       <th scope="col">location</th>
-      <th scope="col">rating</th>
+      <th scope="col">description</th>
       <th scope="col">modify</th>
     </tr>
   </thead>
@@ -27,7 +27,7 @@
       <th scope="row">{{$item->id}}</th>
       <td>{{$item->name}}</td>
       <td>{{$item->location}}</td>
-      <td>{{$item->rating}}</td>
+      <td>{{$item->description}}</td>
       <td>
 
       <a href="/edit/{{$item->id}}"><i class="fa fa-edit"></i></a>
