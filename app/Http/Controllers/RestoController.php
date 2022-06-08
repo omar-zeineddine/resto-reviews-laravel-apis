@@ -17,6 +17,25 @@ class RestoController extends Controller
         return view('list', ["data"=>$data]);
     }
 
+    //Get all restaurants
+    public function getRestos(){
+        $restos = Restaurant::all();
+        
+        return response()->json([
+            "status" => "Success",
+            "results" => $restos
+        ], 200);
+    }
+
+    public function getResto($id){
+        $resto = Restaurant::find($id);
+        
+        return response()->json([
+            "status" => "Success",
+            "results" => $resto
+        ], 200);
+    }
+
     function addResto(Request $req) {
         $resto = new Restaurant;
         $resto->name = $req->input('name') ;
