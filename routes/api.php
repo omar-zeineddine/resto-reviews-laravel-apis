@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\reviewsController;
 
 
@@ -21,9 +22,9 @@ use App\Http\Controllers\reviewsController;
 Route::get('/reviews', [reviewsController::class, 'getReviews']);
 Route::get('/review/{id?}', [reviewsController::class, 'getReview']);
 
-// add reviews
-Route::get('/add_review', [reviewsController::class, 'addReview']);
-Route::get('/delete_review', [reviewsController::class, 'deleteReview']);
+// add, delete reviews
+Route::get('/delete_review/{id?}', [reviewsController::class, 'deleteReview']);
+Route::post('/add_review', [reviewsController::class, 'addReview']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

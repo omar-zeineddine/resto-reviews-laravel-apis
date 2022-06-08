@@ -29,4 +29,26 @@ class reviewsController extends Controller{
         ],200);
      }
 
+     public function deleteReview(Request $request){
+        Review::where('id',$request->id)->delete();
+        
+        return response()->json([
+            "success" => true,
+        ], 200);
+    }
+
+    function addReview(Request $request) {
+        $review = new Review;
+
+        $review->text = $request->text;
+        $review->rating = $request->rating;
+        $review->restaurant_id = $request->restaurant_id;
+        $review->user_id = $request->user_id;
+        $review->save();
+
+        return response()->json([
+            "status" => "Success"
+        ], 200);
+    }
+
 }
